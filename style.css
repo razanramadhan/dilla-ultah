@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(bckg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Agar gambar tetap saat di-scroll */
+}
+
+/* Container Box */
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 228, 225, 0.9); /* Warna latar semi-transparan agar teks tetap terbaca */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+h1 {
+    color: #ad1457;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+/* Message Paragraph Styling */
+p {
+    font-size: 1.3em;
+    color: #880e4f;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #d81b60;
+}
+
+/* Surprise Section */
+#surprise img {
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Love Note Styling */
+#loveNote p {
+    font-size: 1.2em;
+    color: #c2185b;
+    margin-top: 15px;
+}
+
+/* Hidden Class to Hide Elements Initially */
+.hidden {
+    display: none;
+}
+

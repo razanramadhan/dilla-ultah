@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday DILLA MARCELLA OCTAVIANI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio: tidak autoplay, dimulai saat tombol diklik -->
+    <audio id="background-music" src="hbd.mp3" loop></audio>
+
+    <div class="container">
+        <h1 id="title">Happy Birthday, DILLA!!! ❤️</h1>
+        <p id="message">HI!! Dilla Selamat Ulang Tahun Yaaa..maaf ya telattt </p>
+        
+        <!-- Tombol untuk mengungkap kejutan dan memulai musik -->
+        <button id="btnReveal" onclick="revealSurprise()">Click for a Special Surprise</button>
+
+        <div id="surprise" class="hidden">
+            <img src="dila.jpeg" alt="Love Balloons" width="200" height="auto" />
+            <p>Selamat ulang tahun ya dilla,,Semoga panjang umur sehat selalu dan selalu mudahkan rezeki nyaa...aamiin</p>
+            <p>maaf ya dila telat,semangatt terus ya dila jaga kesehatannyaaa & jangan lupa solat 5 waktu nya yaa...
+                maaf ya dila kalau selama ini aa suka bikin bt dila di setiap hari nyaaa hehehe
+                jangann bt & cuek terus ya hihihi</p>
+            <p>semoga hal baik selalu beriringan denganmu,
+                semoga semesta senantiasa berpihak kepada dila,
+                semoga jalan mu untuk mencapai masa depan yang cerah di permudahkan,teruslah tumbuh,teruslah melangkah & berbahagialah.aa akan selalu bangga akan atas setiap proses yang sudah dila lalui hihi.
+                i will always support u from afar..</p>
+            <p>tetap jaga diri baik baik ya semoga Allah mempertemukan kita di waktu yang terbaik,,Aamiin
+                pokonya kalo dunia punya cara untuk misahkan kita,kita juga harus punya miliyaran cara untuk terus bersama hehehe</p>
+            <button id="btnLove" onclick="displayLove()">Press to See More ❤️</button>
+            
+            <div id="loveNote" class="hidden">
+                <p>Kamu akan selalu menjadi perempuan favoritku,perempuan yang selalu aku tunggu notif chatnya,perempuan yang selalu ingin aku datangi,perempuan yang akan aku jadikan tujuan dan perempuan yang selalu aku sayangi hari ini,esok nanti dan seterus nya hihihi</p>
+                
+                <!-- Slideshow Galeri Foto -->
+                <h2>Galeri Foto Kenangan hihi</h2>
+                <div class="slideshow-container">
+                    <img id="slideshow" src="1.jpg" alt="Foto Kenangan">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk fitur kejutan, slideshow, dan kontrol audio -->
+    <script>
+        const music = document.getElementById("background-music");
+
+        // Fungsi untuk mengungkap kejutan dan memulai musik
+        function revealSurprise() {
+            document.getElementById("surprise").classList.remove("hidden");
+            if (music) {
+                music.play().catch(error => {
+                    console.log("Autoplay prevented, user interaction required.");
+                });
+            }
+        }
+
+        // Fungsi untuk menampilkan pesan cinta dan memulai slideshow
+        function displayLove() {
+            document.getElementById("loveNote").classList.remove("hidden");
+            startSlideshow(); // Memulai slideshow setelah kejutan dibuka
+        }
+
+        // Daftar gambar untuk slideshow
+        const images = [
+            '1.jpg',
+            '2.jpg',
+            '3.jpg',
+            '4.jpg',
+            '5.jpeg',
+        ];
+        
+        let currentImageIndex = 0;
+        const slideshowElement = document.getElementById('slideshow');
+
+        // Fungsi untuk memulai slideshow
+        function startSlideshow() {
+            setInterval(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                slideshowElement.src = images[currentImageIndex];
+            }, 3000); // Ganti gambar setiap 3 detik
+        }
+    </script>
+</body>
+</html>
